@@ -1,0 +1,31 @@
+/* 表情包总栏 */
+.emoji_div{
+	width: 350px;
+	height: 150px;
+	border: 1px solid gray;
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	background-color: white;
+	border-radius: 10px;
+	overflow-y: auto;
+	/* display: none; */
+	/* z-index: 2999; */
+}
+/* 表情栏 */
+.oEmoji_divImg{
+	width: 100%;
+	height: 80%;
+	overflow-y: auto;
+	text-align: left;
+}
+/* 表情栏按钮框 */
+.oEmoji_divBtn{
+	width: 100%;
+	height: 20%;
+	text-align: left;
+}
+/* 表情图片伪类 */
+.emojiImg:hover{
+	background-color: #888888;
+}

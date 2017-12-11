@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery-1.11.min.js"></script>
+	<script type="text/javascript" src="./Emoji.js"></script>
+	<link rel="stylesheet" type="text/css" href="./Emoji.css">
+	<style type="text/css">
+		#main{
+			width: 300px;
+			height: 300px;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -150px;
+			margin-left: -150px;
+		}
+		#btn{
+			position: relative;
+		}
+		#talkInput{
+			width: 300px;
+			height: 200px;
+			border: 1px solid;
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div><button id="btn">表情</button></div>
+		<div contenteditable="true" id="talkInput"></div>
+	</div>
+	<script type="text/javascript">
+		$("#btn").on("click",function(){
+
+		if($(this).find('.emoji_div').length==0){//判断表情栏是否存在
+			// console.log($(this));
+			var oEmoji_main = new Emoji($(this),$("#talkInput"));//实例化表情栏
+			oEmoji_main.firstEmoji();//调用默认显示的表情包
+		}else{
+			$(this).find('.emoji_div').remove();//移除表情栏
+		}
+			
+		})
+		
+	</script>
+	
+</body>
+</html>
